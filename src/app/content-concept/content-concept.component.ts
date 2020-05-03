@@ -1,14 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+import {Concept} from '../concept';
 @Component({
   selector: 'app-content-concept',
   templateUrl: './content-concept.component.html',
   styleUrls: ['./content-concept.component.css']
 })
 export class ContentConceptComponent implements OnInit {
+
+  constructor() { }
   conceptValue;
   definitionValue;
-  constructor() { }
+  conceptModel = new Concept('', '');
+
 
   ngOnInit(): void {
   }
@@ -16,5 +21,13 @@ export class ContentConceptComponent implements OnInit {
   onConceptInputChange() {
     console.log(this.conceptValue);
   }
+  onSubmit() {
+  }
+  newConcept() {
+    this.conceptModel = new Concept('', '');
+  }
 
+  deleteConcept() {
+
+  }
 }

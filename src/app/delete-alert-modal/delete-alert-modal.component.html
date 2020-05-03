@@ -1,0 +1,14 @@
+<div class="modal-header">
+  <h4 class="modal-title">Delete Concept</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>There has been {{numberConnectedConcept}} concept(s) and {{numberConnectedExample}} example(s)
+    linked with this concept. Are you sure to delete the concept <b>{{conceptName}}</b>? </p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-primary btn-block" (click)="activeModal.close('Close click')">Yes</button>
+  <button type="button" class="btn btn-outline-primary btn-block" (click)="activeModal.close('Close click')">No</button>
+</div>

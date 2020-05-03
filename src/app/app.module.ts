@@ -7,7 +7,8 @@ import { NavFileComponent } from './nav-file/nav-file.component';
 import { NavConceptComponent } from './nav-concept/nav-concept.component';
 import { ContentConceptComponent } from './content-concept/content-concept.component';
 import { ContentConceptExampleComponent } from './content-concept-example/content-concept-example.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import { DeleteAlertModalComponent } from './delete-alert-modal/delete-alert-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {FormsModule} from "@angular/forms";
     NavFileComponent,
     NavConceptComponent,
     ContentConceptComponent,
-    ContentConceptExampleComponent
+    ContentConceptExampleComponent,
+    DeleteAlertModalComponent
   ],
     imports: [
         BrowserModule,
