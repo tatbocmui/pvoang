@@ -1,0 +1,25 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Concept</a>
+    <ng-template ngbNavContent>
+      <app-content-concept></app-content-concept>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Concept-Example</a>
+    <ng-template ngbNavContent>
+      <app-content-concept-example></app-content-concept-example>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Concept-Example</a>
+    <ng-template ngbNavContent>Example-Search</ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink>Concept-Example</a>
+    <ng-template ngbNavContent>Vocabulary Tree</ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
