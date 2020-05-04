@@ -10,6 +10,8 @@ import { ContentConceptExampleComponent } from './content-concept-example/conten
 import {FormsModule} from '@angular/forms';
 import { DeleteAlertModalComponent } from './delete-alert-modal/delete-alert-modal.component';
 
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +21,14 @@ import { DeleteAlertModalComponent } from './delete-alert-modal/delete-alert-mod
     ContentConceptExampleComponent,
     DeleteAlertModalComponent
   ],
-    imports: [
-        BrowserModule,
-        NgbModule,
-        FormsModule
-    ],
+  imports: [
+      BrowserModule,
+      NgbModule,
+      FormsModule
+  ],
+  entryComponents: [
+    DeleteAlertModalComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

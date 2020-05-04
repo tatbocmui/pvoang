@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit} from '@angular/core';
+import {NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 import {Concept} from '../concept';
+import {DeleteAlertModalComponent} from '../delete-alert-modal/delete-alert-modal.component';
 @Component({
   selector: 'app-content-concept',
   templateUrl: './content-concept.component.html',
   styleUrls: ['./content-concept.component.css']
 })
 export class ContentConceptComponent implements OnInit {
-
-  constructor() { }
+  modalOptions: NgbModalOptions;
+  constructor(
+      private modalService: NgbModal
+  ) {
+    this.modalOptions = {
+      backdrop: 'static',
+      backdropClass: 'customBackdrop'
+    }
+  }
   conceptValue;
   definitionValue;
   conceptModel = new Concept('', '');
@@ -28,6 +36,9 @@ export class ContentConceptComponent implements OnInit {
   }
 
   deleteConcept() {
-
+    const modalRef = this.modalService.open(DeleteAlertModalComponent);
+    modalRef.componentInstance.numberConnectedExample = 0;
+    modalRef.componentInstance.numberConnectedConcept = 0;
+    modalRef.componentInstance.conceptName = 'test';
   }
 }

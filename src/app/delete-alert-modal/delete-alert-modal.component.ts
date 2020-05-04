@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,9 +7,9 @@ import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./delete-alert-modal.component.css']
 })
 export class DeleteAlertModalComponent implements OnInit {
-  numberConnectedExample = 0;
-  numberConnectedConcept = 0;
-  conceptName = 'Test';
+  @Input() numberConnectedExample;
+  @Input() numberConnectedConcept;
+  @Input() conceptName;
 
   constructor(public activeModal: NgbActiveModal) {}
 

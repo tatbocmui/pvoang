@@ -7,3 +7,8 @@
   border-left: 5px solid #a94442; /* red */
 }
 
+/*remove outline button (cross click at modal)*/
+button:focus,button:active {
+  outline: none !important;
+  box-shadow: none;
+}
