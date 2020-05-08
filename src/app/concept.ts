@@ -1,6 +1,8 @@
 export class Concept {
   constructor(
-    public conceptname: string,
-    public conceptDefinition: string
+    public conceptID: number,
+    public conceptName: string,
+    public conceptDefinition: string,
+    public conceptImageUrl: string
   ) {}
 }

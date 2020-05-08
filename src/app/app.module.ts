@@ -9,6 +9,8 @@ import { ContentConceptComponent } from './content-concept/content-concept.compo
 import { ContentConceptExampleComponent } from './content-concept-example/content-concept-example.component';
 import {FormsModule} from '@angular/forms';
 import { DeleteAlertModalComponent } from './delete-alert-modal/delete-alert-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SelectEditAlertModalComponent } from './select-edit-alert-modal/select-edit-alert-modal.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -19,12 +21,14 @@ import { DeleteAlertModalComponent } from './delete-alert-modal/delete-alert-mod
     NavConceptComponent,
     ContentConceptComponent,
     ContentConceptExampleComponent,
-    DeleteAlertModalComponent
+    DeleteAlertModalComponent,
+    SelectEditAlertModalComponent
   ],
   imports: [
       BrowserModule,
       NgbModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule
   ],
   entryComponents: [
     DeleteAlertModalComponent
